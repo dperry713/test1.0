@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: flask-sum-api
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "poetry install"
+    startCommand: "python -m flask_sum_api.app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
